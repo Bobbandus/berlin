@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resplan | Berlin 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1d1d1f;
+            -webkit-font-smoothing: antialiased;
+        }
+        .timeline-dot {
+            position: relative;
+        }
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 24px;
+            bottom: -24px;
+            width: 1px;
+            background-color: #e5e7eb;
+            transform: translateX(-50%);
+        }
+        .timeline-item:last-child .timeline-dot::before {
+            display: none;
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-100">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-screen-xl mx-auto px-6 h-12 flex items-center justify-between">
+            <div class="font-semibold text-sm tracking-tight italic">April 2026</div>
+            <div class="flex gap-8 text-[12px] font-medium text-gray-500">
+                <a href="index.html" class="hover:text-black transition-colors">Översikt</a>
+                <a href="resplan.html" class="text-black transition-colors">Resplan</a>
+                <a href="logistik.html" class="hover:text-black transition-colors">Logistik</a>
+                <a href="budget.html" class="hover:text-black transition-colors">Budget</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-screen-md mx-auto">
+            <h1 class="text-4xl font-semibold tracking-tight mb-4">Tidslinje.</h1>
+            <p class="text-lg text-gray-500">
+                En dag-för-dag genomgång av expeditionen. Från avgången i Göteborg till den kritiska hemkomsten.
+            </p>
+        </div>
+    </section>
+
+    <!-- Timeline Content -->
+    <section class="pb-32 px-6">
+        <div class="max-w-screen-md mx-auto space-y-12">
+            
+            <!-- Dag 1 -->
+            <div class="timeline-item flex gap-8">
+                <div class="timeline-dot flex-none text-center">
+                    <div class="w-1.5 h-1.5 bg-black rounded-full mt-2.5"></div>
+                </div>
+                <div>
+                    <h2 class="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-2">4 April — Deployment</h2>
+                    <h3 class="text-2xl font-semibold mb-4 text-black">Resan mot söder.</h3>
+                    <div class="space-y-4 text-gray-500 leading-relaxed">
+                        <div class="flex justify-between items-start border-b border-gray-50 pb-2">
+                            <span>07:00</span>
+                            <span class="text-black font-medium">Avgång Göteborg Central</span>
+                        </div>
+                        <p>Långdistansbuss mot Berlin. Inkluderar ett 2-timmars stopp i Köpenhamn vid IKEA/Max för lunch och bensträckare.</p>
+                        <div class="flex justify-between items-start border-b border-gray-50 pb-2">
+                            <span>21:10</span>
+                            <span class="text-black font-medium">Ankomst Berlin ZOB</span>
+                        </div>
+                        <p>Incheckning på hotell 50 meter från stationen. Traditionsenlig Döner vid hörnet direkt efter ankomst.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dag 2-4 -->
+            <div class="timeline-item flex gap-8">
+                <div class="timeline-dot flex-none text-center">
+                    <div class="w-1.5 h-1.5 bg-black rounded-full mt-2.5"></div>
+                </div>
+                <div>
+                    <h2 class="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-2">5-7 April — The Dome</h2>
+                    <h3 class="text-2xl font-semibold mb-4 text-black">Tropisk isolering.</h3>
+                    <div class="space-y-4 text-gray-500 leading-relaxed">
+                        <p>Tåg från Berlin till Brand (Niederlausitz) följt av shuttlebuss till Tropical Islands.</p>
+                        <p class="bg-gray-50 p-6 rounded-2xl text-black">
+                            Två nätter i tält under kupolen. Full tillgång till bad, regnskog och 26-gradig värme.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dag 4 kväll -->
+            <div class="timeline-item flex gap-8">
+                <div class="timeline-dot flex-none text-center">
+                    <div class="w-1.5 h-1.5 bg-black rounded-full mt-2.5"></div>
+                </div>
+                <div>
+                    <h2 class="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-2">7 April — Re-entry</h2>
+                    <h3 class="text-2xl font-semibold mb-4 text-black">Berlin igen.</h3>
+                    <div class="space-y-4 text-gray-500 leading-relaxed">
+                        <p>Tåg tillbaka till Berlin under eftermiddagen. Sista natten spenderas på hotell nära busstationen för att maximera effektiviteten inför morgondagens exfiltration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dag 5 -->
+            <div class="timeline-item flex gap-8">
+                <div class="timeline-dot flex-none text-center">
+                    <div class="w-1.5 h-1.5 bg-red-600 rounded-full mt-2.5"></div>
+                </div>
+                <div>
+                    <h2 class="text-sm font-semibold text-red-600 uppercase tracking-widest mb-2">8 April — Extraction</h2>
+                    <h3 class="text-2xl font-semibold mb-4 text-black">Den kritiska hemresan.</h3>
+                    <div class="space-y-6 text-gray-500 leading-relaxed">
+                        <p>Buss från Berlin mot Malmö på morgonen.</p>
+                        <div class="bg-red-50 border border-red-100 p-8 rounded-2xl text-red-900">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></span>
+                                <span class="font-bold text-xs uppercase tracking-widest">Kritiskt fönster: 17 minuter</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm">Ankomst Malmö C:</span>
+                                <span class="font-bold">18:55</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-sm">Avgång mot Göteborg:</span>
+                                <span class="font-bold">19:12</span>
+                            </div>
+                            <p class="text-sm opacity-80 italic">Ingen tid för felsteg. Förbered packning innan ankomst till Malmö.</p>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-gray-50 pb-2">
+                            <span>22:05</span>
+                            <span class="text-black font-medium">Ankomst Göteborg C</span>
+                        </div>
+                        <p>Uppdraget avslutat.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 py-12 px-6">
+        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400 text-[11px] gap-6">
+            <div class="uppercase tracking-widest">&copy; 2026 Berlin Expedition Group</div>
+            <div class="flex gap-8">
+                <a href="logistik.html" class="hover:text-black transition-colors">Nästa: Logistik &rsaquo;</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
